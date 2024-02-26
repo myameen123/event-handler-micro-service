@@ -21,6 +21,7 @@ export const postEvent = (req, res, next) => {
   }
 
   appendToFile("./logging.txt", expression);
+  // console.log(event);
   axios
     .post(`${process.env.PHOTOS_MANAGEMENT_URL}/api/events`, event)
     .catch((err) => {
